@@ -1,0 +1,29 @@
+name: tlotlo_1st_app_project
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+# ⬇️ EDIT THIS DEPENDENCIES SECTION ⬇️
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  cupertino_icons: ^1.0.8
+  
+  # ⬇️ ADD THESE 3 LINES HERE (with same indentation) ⬇️
+  sqflite: ^2.3.0
+  path: ^1.8.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0  # Keep this as 5.0.0 (it's fine)
+
+flutter:
+  uses-material-design: true
