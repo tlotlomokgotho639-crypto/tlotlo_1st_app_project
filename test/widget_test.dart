@@ -4,24 +4,18 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:tlotlo_1st_app_project/main.dart';
 
 void main() {
-  testWidgets('Study Planner app loads correctly', (WidgetTester tester) async {
-    // Build our app
-    await tester.pumpWidget(const StudyPlannerApp());
+  testWidgets('Pulse app loads correctly', (WidgetTester tester) async {
+    await tester.pumpWidget(const PulseApp());
 
-    // Verify the app title appears
-    expect(find.text('Study Planner'), findsOneWidget);
-    
-    // If you're using the simple one-file version with "Study Planner Pro":
-    // expect(find.text('Study Planner Pro'), findsOneWidget);
+    expect(find.text('Your sound,\nyour space.'), findsOneWidget);
+    expect(find.text('Your library'), findsOneWidget);
   });
 
-  testWidgets('App has add course button', (WidgetTester tester) async {
-    await tester.pumpWidget(const StudyPlannerApp());
-    
-    // Check for add button or related text
-    expect(find.byIcon(Icons.add), findsAtLeast(1));
-    
-    // Or check for course-related text
-    expect(find.textContaining('Course'), findsAtLeast(1));
+  testWidgets('App has music controls', (WidgetTester tester) async {
+    await tester.pumpWidget(const PulseApp());
+
+    expect(find.text('Midnight Drive'), findsAtLeast(1));
+    expect(find.byIcon(Icons.play_arrow), findsAtLeast(1));
+    expect(find.byTooltip('Import music'), findsOneWidget);
   });
 }
